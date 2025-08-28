@@ -1,9 +1,9 @@
 /*====Hamburger menu JS Code ====*/
 const hamburger = document.getElementById("hamburger");
-const nav = document.querySelector("nav");
+const navBar = document.querySelector(".navBar");
 
-hamburger.addEventListener("click", () => {
-  nav.classList.toggle("active");
+hamburger.addEventListener("click", ()=>{
+    navBar.classList.toggle("active");
 });
 
 
