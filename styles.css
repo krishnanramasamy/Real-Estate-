@@ -1,19 +1,23 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    background: url('./home\ 1\ bc\ img.jpg') no-repeat center center / cover fixed;
+    background: url('./service\ bc\ img.jpeg') no-repeat center center / cover fixed;
 }
 
-/* #2e7d32 */
+span{
+  color:#ffcc00;
+}
 
 /*==== nav tag only ====*/
 nav {
+  background-color:rgb(43, 93, 81);
+  height:90px;
   padding: 10px;
   display: flex;
   justify-content: space-between; 
   align-items: center;
   position: sticky;
-  /* top: 0; */
+  top: 0;
   z-index: 9999;
 }
 
@@ -31,7 +35,6 @@ section.hidden {
   display: none;
 }
 
-
 /*==== logo ====*/
 nav>.logo{
   display: flex;
@@ -42,9 +45,15 @@ nav>.logo{
   margin-top: 30px;
 }
 
+.logo>img {
+  margin-top: 16px;
+}
+
 .logo>h3{
-  color: white;
+  color:#ffcc00;
+  /* color:#1eb826; */
   font-size: 30px;
+  margin-bottom: 55px;
 }
 
 /*==== ul list ====*/
@@ -61,20 +70,15 @@ nav ul li {
 
 nav a {
   text-decoration: none;
-  color: white;
+  color:white;
+  /* color: #1eb826; */
   font-weight: bold;
   cursor: pointer;
 }
 
 nav a:hover{
-  color:black;
+  color:#ffcc00;
 }
-
-nav a.active {
-  font-weight: bold;
-  color:black;
-}
-
 
 /*==== nav right menu ====*/
 .nav-right{
@@ -82,7 +86,7 @@ nav a.active {
 }
 
 .nav-right>li>button{
-  background-color: #2e7d32;
+  background-color:#ffcc00;
   border-radius: 5px;
   border: none;
   height: 40px;
@@ -92,8 +96,8 @@ nav a.active {
 }
 
 .nav-right>li>button:hover{
-  background-color: #043606;
-  color: white;
+  background-color:rgb(2, 48, 37);
+  color:#ffcc00;
 }
 
 .nav-right>li>input{
@@ -104,8 +108,8 @@ nav a.active {
 }
 
 .nav-right>button:hover{
-  background-color: #043606;
-  color: white;
+  background-color:rgb(2, 48, 37);
+  color: #ffcc00;
 }
 
 .nav-right>button{
@@ -115,12 +119,9 @@ nav a.active {
   padding: 10px;
   width: 100px;
 
-  background-color:#2e7d32;
+  /* background-color:#1eb826; */
+  background-color:#ffcc00;
   font-weight: bold;
-}
-
-hr{
-  width: 90%;
 }
 
 /*==== media query Mobile view ====*/
@@ -157,20 +158,27 @@ hr{
 
 
 
-
-/*==== hero section ====*/
+/*==== section 1 ====*/
+/*== hero section ==*/
 .hero {
   display: flex;
   justify-content: center;  /* Horizontal center */
   align-items: center;      /* Vertical center */
   height: 100vh;            /* Full viewport height */
   gap: 80px; /* Space between slider & text if side-by-side */
+  margin-top: -140px;
 }
 
 .slider-container {
   position: relative;
   max-width: 600px;
   margin-left: 150px;
+}
+
+.slider-container>img {
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: cover;
 }
 
 /*==== slide animation ====*/
@@ -198,13 +206,13 @@ h1 {
   font-size: 2.5rem;
   font-weight: bold;
   line-height: 4rem;
-  color: white;
+  color:white;
 }
 
 h1 span {
   position: relative;
   display: inline-block;
-  color:black;
+  color:#ffcc00;
 }
 
 /* Line animation to span tag */
@@ -216,7 +224,7 @@ h1 span::after {
   width: 0;
   height: 3px;
   /* background: #2e7d32;    */
-  background:black;
+  background:#ffcc00;
   animation: line-anim 2s infinite;
 }
 
@@ -231,7 +239,7 @@ h1 span::after {
 
 .slide-in>p{
   font-weight: bold;
-  color: white;
+  color:white;
   line-height:1.5rem;
 }
 /*==== hero section's  media query ====*/
@@ -272,10 +280,11 @@ h1 span::after {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
   padding: 40px 20px;
+  margin-top: -140px;
 }
 
 .highlight-card {
-  background: #fff;
+  background:rgb(43, 93, 81);
   border-radius: 15px;
   padding: 25px;
   text-align: center;
@@ -289,6 +298,18 @@ h1 span::after {
   animation: fadeUp 0.8s ease forwards;
 }
 
+.highlight-card:hover{
+  background-color:white;
+}
+
+.highlight-card:hover h3 {
+  color:rgb(43, 93, 81) ;
+}
+
+.highlight-card:hover p {
+  color: black;
+}
+
 /* Stagger animation for each card */
 .highlight-card:nth-child(1) { animation-delay: 0.2s; }
 .highlight-card:nth-child(2) { animation-delay: 0.4s; }
@@ -298,12 +319,12 @@ h1 span::after {
 .highlight-card h3 {
   font-size: 1.5rem;
   margin-bottom: 10px;
-  color: #2e7d32; /* green accent */
+  color:#ffcc00; /* green accent */
 }
 
 .highlight-card p {
   font-size: 1rem;
-  color: #555;
+  color:white;
   line-height: 1.6;
 }
 
@@ -311,7 +332,7 @@ h1 span::after {
 .highlight-card:hover {
   transform: translateY(-10px) scale(1.03);
   box-shadow: 0 12px 25px rgba(0,0,0,0.15);
-  border-color: #2e7d32;
+  /* border-color: #2e7d32; */
 }
 
 /* Keyframes for animation */
@@ -322,91 +343,6 @@ h1 span::after {
   }
 }
 
-
-
-/*==== home container section ====*/
-.homeContainer{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    /* align-items: center; */
-    margin-top: 50px;
-    background-color:#3d7f40;
-    width: 85vw;
-    margin-left: 100px;
-}
-
-.home-content{
-    width: 500px;
-    margin-right: 90px;
-    margin-top: -20px;
-}
-
-
-.rotating-wrapper {
-  position: relative;
-  width: 280px;
-  height: 280px;
-  margin: 50px auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  margin-top: 83px;
-}
-
-.rotating-square {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border: 3px solid white;
-  animation: rotate 10s linear infinite;
-}
-
-.rotating-square.delay {
-  animation-delay: 2s;
-}
-.rotating-square.delay2 {
-  animation-delay: 4s;
-}
-
-@keyframes rotate {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-
-.cta-section {
-  text-align: center;
-  margin: 40px 0;
-}
-
-.btn-primary {
-  display: inline-block;
-  padding: 14px 30px;
-  background: #2e7d32; /* green accent */
-  color: #fff;
-  font-size: 1.1rem;
-  font-weight: 600;
-  border-radius: 50px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-  letter-spacing: 0.5px;
-}
-
-/* Hover effect */
-.btn-primary:hover {
-  background: #1b5e20; /* darker green */
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-}
-
-/* Active (click) effect */
-.btn-primary:active {
-  transform: scale(0.97);
-  box-shadow: 0 5px 12px rgba(0,0,0,0.15);
-}
 
 /* Unified Responsive Media Query */
 @media (max-width: 450px) {
@@ -460,78 +396,49 @@ h1 span::after {
 
 
 
-/*==== images animation section ====*/
-.about-images {
-  flex: 1;
-  position: relative;
-  min-height: 80vh;   /* ✅ important for mobile */
-  max-width: 50vw;
-  overflow: hidden;
-  border-radius: 10px;
 
-  margin-top:125px;
-  /* margin-left: 20%; */
-}
-
-.about-images img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0;
-  animation: fadeSlideshow 12s infinite;
-}
-
-.about-images img:nth-child(1) { animation-delay: 0s; }
-.about-images img:nth-child(2) { animation-delay: 4s; }
-.about-images img:nth-child(3) { animation-delay: 8s; }
-
-@keyframes fadeSlideshow {
-  0% { opacity: 1; }
-  25% { opacity: 1; }
-  33% { opacity: 0; }
-  100% { opacity: 0; }
-}
 
 /* About Section */
 /* ===== About Us Styling ===== */
 .about-section {
-  background: linear-gradient(to bottom, #f5f7fa 50%,#3d7f40 50%);
+  background: linear-gradient(to bottom, #f5f7fa 50%,rgb(43, 93, 81) 50%);
   padding: 40px 20px;
   text-align: center;
   font-family: 'Segoe UI', sans-serif;
   border-radius: 20px;
-
+  
   width: 75%;
   margin: 0 auto;
 }
 
+#about{
+  margin-top: 180px;
+}
+
 /*== hover ==*/
 .about-section:hover{
-  background: linear-gradient(to bottom,#26832b 50%, #f5f7fa 50%);
+  background: linear-gradient(to bottom,rgb(43, 93, 81) 50%, #f5f7fa 50%);
 .about-text>h2{
-  color: white;
+  color:#ffcc00;
 } 
-.about-text span{
+/* .about-text span{
   color: black;
-}
+} */
 .about-text>.intro{
   color: white;
 }
 .about-box{
-  background-color:#569d59;
+  background-color:rgb(43, 93, 81);
   border:5px solid white;
 }
 .about-box>h3{
-  color:white;
+  color:#ffcc00;
 }
 .about-box>p{
-  color:black;
+  color:white;
 }
 .about-box>ul>li{
-  color: black;
+  color:white;
 }
 }
 
@@ -539,12 +446,13 @@ h1 span::after {
 .about-container {
   max-width: 9000px;
   margin: 0 auto;
+  
 }
 
 .about-text h2 {
   font-size: 3rem;
   margin-bottom: 20px;
-  color:#3d7f40;
+  color:rgb(43, 93, 81);
   position: relative;
   animation: fadeDown 1s ease forwards;
 }
@@ -562,12 +470,12 @@ h1 span::after {
 
 .about-text span {
   font-weight: bold;
-  color: #0dd113;
+  /* color: #0dd113; */
 }
 
 .about-box {
   background: whitesmoke;
-  border: 5px solid #55ac5a;
+  border: 5px solid rgb(43, 93, 81);
   /* border-bottom: 5px solid white; */
   margin: 20px 0;
   padding: 25px;
@@ -585,7 +493,7 @@ h1 span::after {
 
 .about-box h3 {
   margin-bottom: 10px;
-  color: #3d7f40;
+  color:rgb(43, 93, 81);
   font-size: 1.4rem;
 }
 
@@ -646,24 +554,14 @@ h1 span::after {
 /*==== Services Section ====*/
 .services{
   background-color: #f5f7fa;
-  margin-top: 100px;
+  margin-top:200px;
   padding: 50px;
 }
 
 .services>h2{
   text-align: center;
   font-size:3rem;
-  color:#3d7f40;
-}
-
-/* .services-intro{
-
-} */
-
-.services-section {
-  text-align: center;
-  padding: 50px 20px;
-  /* background: #f5f7fa; */
+  color:rgb(43, 93, 81);
 }
 
 .services-slider {
@@ -680,32 +578,17 @@ h1 span::after {
   margin-top: 50px;
 }
 
-.services-scroll {
-  display: flex;
-  gap: 20px;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  padding: 20px 0;
-  margin-top: 50px;
-}
 
-.services-scroll::-webkit-scrollbar {
-  height: 8px;
-}
-.services-scroll::-webkit-scrollbar-thumb {
-  background: #3d7f40;
-  border-radius: 4px;
-}
-
+/*= service card1 =*/
 .service-card1{
   min-width: 300px;
   margin: 0 15px;
   padding: 20px;
-  background: #3d7f40;
+  background:rgb(43, 93, 81);
   border-radius: 12px;
   border-bottom-right-radius: 50px;
   box-shadow: 0 5px 12px rgba(0,0,0,0.1);
-  color: white;
+  color:white;
   
 
   /* fadeInUp effect */
@@ -719,21 +602,49 @@ h1 span::after {
 }
 
 .service-card1:hover{
-  background-color:whitesmoke;
-  color:#3d7f40;
+  background-color:#ffcc00;
+  color:rgb(16, 59, 49);
+  font-weight: bold;
 }
 
+
+/*== service section ==*/
+.services-section {
+  text-align: center;
+  padding: 50px 20px;
+  /* background:pink; */
+}
+
+.services-scroll {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 20px 0;
+  margin-top: 50px;
+}
+
+.services-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+.services-scroll::-webkit-scrollbar-thumb {
+  background:#ffcc00;
+  border-radius: 4px;
+}
+
+
+/*= service card =*/
 .service-card {
   position: relative;
   overflow: hidden; /* keep pseudo-element inside */
   min-width: 300px;
   margin: 0 15px;
   padding: 20px;
-  background: #3d7f40;
+  background:rgb(43, 93, 81);
   border-radius: 12px;
   border-bottom-right-radius: 150px;
   box-shadow: 0 5px 12px rgba(0,0,0,0.1);
-  color: white;
+  /* color: white; */
   
 
   /* fadeInUp effect */
@@ -745,7 +656,6 @@ h1 span::after {
   text-align: left;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 
 
 /* text stays above pseudo-element */
@@ -766,7 +676,7 @@ h1 span::after {
   left: 0;
   width: 100%;
   height: 100%;
-  background:whitesmoke; /* hover color */
+  background:#e8c849; /* hover color */
   transform: scaleY(0); /* hidden */
   transform-origin: bottom; /* fill starts from bottom */
   transition: transform 0.5s ease;
@@ -780,30 +690,34 @@ h1 span::after {
 
 /* optional: change text color when filled */
 .service-card:hover h3{
-  color: #2e7d32;
+  color:rgb(2, 45, 35);
 }
 
-.service-card:hover p,
 .service-card:hover ul li{
-  
   color: black;
 }
 
+.service-card:hover p {
+  color:red;
+  font-weight: bold;
+}
+
 .service-card:hover .btn{
-  background: #2e6130;
+  background:rgb(16, 59, 49);
+  color: white;
 }
 
 .service-card h3 {
   font-size: 1.3rem;
   margin-bottom: 10px;
-  color: #2e7d32;
-  color: white;
+  color:#ffcc00;
+  /* color: white; */
 }
 
 .service-card p {
   font-size: 0.95rem;
   margin-bottom: 15px;
-  color: black;
+  color:white;
 }
 
 .service-card ul {
@@ -820,8 +734,8 @@ h1 span::after {
 .service-card .btn {
   display: inline-block;
   padding: 8px 14px;
-  background: #061e07;
-  color: white;
+  background:#ffcc00;
+  color:black;
   border-radius: 6px;
   font-size: 0.9rem;
   text-decoration: none;
@@ -829,7 +743,7 @@ h1 span::after {
 }
 
 .service-card .btn:hover {
-  background: #2e6130;
+  background:rgb(10, 68, 54);
 }
 
 /* Scroll movement */
@@ -919,6 +833,8 @@ h1 span::after {
   /* To make text readable */
   position: relative;
   z-index: 1;
+
+  margin-top: 180px;
 }
 
 .blog-container{
@@ -927,8 +843,6 @@ h1 span::after {
   background-attachment: fixed; /* optional: parallax effect */
   padding: 50px 20px;           /* spacing inside the grid */
   border-radius: 12px;          /* optional rounded corners */
- 
-
   position: relative;
   overflow: hidden;
   color:black;   
@@ -954,7 +868,7 @@ h1 span::after {
   font-size: 3rem;
 }
 .blog-container>.title>.blog-intro{
-  color:aqua;
+  color:white;
   font-weight: bold;
 }
 
@@ -970,8 +884,8 @@ h1 span::after {
 .blog-card {
   position: relative;
 
-  background:white;
-  color:#3d7f40;
+  background:whitesmoke;
+  /* color:#3d7f40; */
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 8px 20px rgba(0,0,0,0.08);
@@ -992,12 +906,12 @@ h1 span::after {
   position: relative;
   z-index: 4; /* put above hover overlay */
   font-weight: 600;
-  color: black; /* default color */
+  color:rgb(1, 53, 41); /* default color */
   transition: color 0.3s ease;
 }
 
 .blog-card:hover .read-more {
-  color: white; /* text color on hover */
+  color:#ffcc00; /* text color on hover */
 }
 
 /* Underline effect */
@@ -1016,7 +930,7 @@ h1 span::after {
 
 .blog-card:hover .read-more::after {
   width: 100%;
-  background: white;
+  /* background: white; */
 }
 
 
@@ -1048,7 +962,7 @@ h1 span::after {
   left: 0;
   width: 100%;
   height: 100%;
-  background:#3d7f40;    /* hover color */
+  background:rgb(43, 93, 81);    /* hover color */
   transform: scaleY(0);      /* hidden */
   transform-origin: top;     /* fill starts from top */
   transition: transform 0.5s ease;
@@ -1066,9 +980,12 @@ h1 span::after {
 
 /* Optional: change text color when filled */
 .blog-card:hover h3,
-.blog-card:hover p,
 .blog-card:hover .blog-content .read-more  {
-  color:white;  /* text color on hover */
+  color:#ffcc00;  /* text color on hover */
+}
+
+.blog-card:hover p {
+  color: white;
 }
 
 /* Ensure pseudo-element for underline */
@@ -1139,7 +1056,7 @@ h1 span::after {
 .blog-content h3 {
   font-size: 1.2rem;
   margin-bottom: 10px;
-  color:#2e7d32;
+  color:rgb(1, 53, 41);
 }
 
 /* Read More Link Animation */
@@ -1194,224 +1111,144 @@ h1 span::after {
 
 
 
-/*==== contact ====*/
+/*==== contact section ====*/
 .contact-section {
-  padding: 40px 20px;
-  position: relative;
-  text-align: center;
-
-  /* Background image */
-  /* background: url("./contact.jpg") no-repeat center center/cover; */
-  z-index: 1;
-}
-
-/* Overlay to improve readability */
-/* .contact-section::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0, 0, 0, 0.5); 
-  z-index: -1;
-} */
-
-
-#contact>h2{
-  color: black;
-}
-
-.section-title {
-  text-align: center;
-  font-size: 2rem;
-  color:white;
-  margin-bottom: 5px;
-
-  position: relative;      /* ✅ required */
-  display: inline-block;   /* ✅ allows underline sizing */
-}
-
-/* underline */
-.section-title::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  width: 0;
-  height: 3px;
-  background: #ff4b5c;
-  display: block;   /* ✅ ensures width animates */
-  animation: underlineExpand 1s ease forwards;
-}
-
-.section-subtitle {
-  /* display: inline-block;
-  position: relative; */
-
-  text-align: center;
-  font-size: 1rem;
-  color:white;
-  margin-bottom: 30px;
-}
-
-/* underline */
-.section-title::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -5px; /* little gap under text */
-  width: 0;
-  height: 3px;
-  background:white;
-  animation: underlineExpand 1s ease infinite;
-}
-
-/* keyframes */
-@keyframes underlineExpand {
-  from { width: 0; }
-  to { width: 100%; }
+  /* background: linear-gradient(135deg, #f5f7fa, #c3cfe2); */
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 100px;
 }
 
 
+
+/*== contact container ==*/
 .contact-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+  max-width: 1100px;
+  width: 100%;
+  gap: 40px;
+  justify-content: space-between;
 }
 
-/* Contact Form */
-.contact-form {
-  flex: 1 1 300px;
-  /* background-color: orangered; */
-  /* background:linear-gradient(50deg, red 50%, orange 50%); */
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.contact-form {
-  animation: slideLeft 1s ease forwards;
-  opacity: 0;
-}
+/* Contact Info Styling */
 .contact-info {
-  animation: slideRight 1s ease forwards;
-  opacity: 0;
-}
-@keyframes slideLeft {
-  0% { opacity: 0; transform: translateX(-100px); }
-  100% { opacity: 1; transform: translateX(0); }
-}
-@keyframes slideRight {
-  0% { opacity: 0; transform: translateX(100px); }
-  100% { opacity: 1; transform: translateX(0); }
+  flex: 1 1 400px;
+  /* background: rgba(255, 255, 255, 0.8); */
+  background-color: rgb(43, 93, 81);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  padding-top: 100px;
+  border: 5px solid white;
 }
 
-
-.contact-form input,
-.contact-form textarea {
-  width: 50%;
-  padding: 10px;
+.contact-info h2 {
+  font-size: 2em;
   margin-bottom: 15px;
-  margin-left: 148px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 0.95rem;
-}
-
-.contact-form button {
-  background:white;
-  /* background:linear-gradient(50deg, white 50%, orange 50%); */
-  color:#2e7d32;
-  font-weight: bold;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1rem;
-  width: 50%;
-  margin-left: 150px;
-}
-
-.contact-form button:hover {
-  background:#2e7d32;
-  color: white;
-}
-
-/* Contact Info */
-.contact-info {
-  flex: 1 1 300px;
-  /* background: orange; */
-  /* background:linear-gradient(50deg, orangered 50%, orange 50%); */
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  padding-left: 250px;
-   margin-top: -30px;  /* adjust value as needed */
-}
-
-.contact-info h3 {
-  margin-bottom: 15px;
-  /* color:black; */
+  background:#ffcc00;
+  /* color: #ffcc00; */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .contact-info p {
-  margin-bottom: 10px;
-  color:black;
-  font-size: 0.95rem;
-  font-weight: bold;
+  margin-bottom: 20px;
+  color:white;
 }
 
-.contact-info>p>a{
+.contact-info ul {
+  list-style: none;
+}
+
+.contact-info ul li {
+  margin-bottom: 10px;
+  font-weight: 500;
   color: white;
 }
 
-/* map animation */
-.map-pulse {
-  display: block;
-  margin: 0 auto;
-  transform: scale(1);
-  animation: pulse 1.5s infinite;
-  margin-top: 30px;
+.contact-info ul li a {
+  color:white;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
-/* Keyframes for grow & shrink */
-@keyframes pulse {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05); /* grows 5% */
-  }
+.contact-info ul li a:hover {
+  color:black;
+  font-weight: bold;
 }
 
 
+
+/*== Contact Form Styling ==*/
+.contact-form {
+  flex: 1 1 400px;
+  /* background: rgba(255, 255, 255, 0.9); */
+  /* background:rgb(238, 177, 63); */
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  border:5px solid #ffcc00;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  margin-bottom: 5px;
+  font-weight: 500;
+  /* color:#ffcc00; */
+  color: white;
+  /* color: rgb(2, 43, 33); */
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border: 3px solid rgb(2, 43, 33);
+  border-radius: 10px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+/* .contact-form input:focus,
+.contact-form textarea:focus {
+  background-color:white;
+  box-shadow: 0 0 8px rgba(37, 117, 252, 0.3);
+} */
+
+.contact-form button {
+  padding: 12px 25px;
+  /* background: linear-gradient(45deg, #6a11cb, #2575fc); */
+  background:#ffcc00;
+  color:black;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.contact-form button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+/* ===== Responsive Styling ===== */
 @media (max-width:450px) {
   .contact-container {
     flex-direction: column;
-    align-items: center; /* center form & info */
-  }
-
-  .contact-form {
-    max-width: 50%;   /* shrink form width */
-    margin: 0 auto;   /* center */
-  }
-
-  .contact-form input,
-  .contact-form textarea,
-  .contact-form button {
-    width: 100%;      /* take full width inside */
-    margin: 15px 0;
-  }
-
-  .contact-info {
-    padding-left: 0;  /* remove left padding */
-    text-align: center;
-  }
-
-  .map-pulse {
-    margin-top: 20px;
-    width: 100%;
-    max-width: 200px; /* keep map readable */
-    height: auto;
+    gap: 20px;
   }
 }
 
@@ -1454,13 +1291,13 @@ h1 span::after {
 }
 
 .footer-container:hover{
-  background-color: #2e7d32;
+  background-color:rgb(43, 93, 81);
 }
 
 /* Change text color of all headings inside on hover */
 .footer-container:hover h2,
 .footer-container:hover h3 {
-  color: #ffffff; /* choose any color you like */
+  color:#ffcc00; /* choose any color you like */
 }
 
 /* Footer columns */
@@ -1475,7 +1312,31 @@ h1 span::after {
   margin-bottom: 15px;
   /* border-bottom: 2px solid #ff9900; */
   padding-bottom: 5px;
-  color:green;
+  color:rgb(2, 55, 43);
+  position: relative; /* needed for ::after */
+  cursor: pointer;
+  display: inline-block;
+}
+
+/* Underline animation */
+.footer-col h3::after,
+.footer-col h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 0;
+  background:#ffcc00;
+
+  animation: underlineAnim 2s infinite; /* runs automatically */
+}
+
+/* Keyframes for underline growth */
+@keyframes underlineAnim {
+  0%   { width: 0; }
+  50%  { width: 100%; }
+  100% { width: 0; }
 }
 
 .footer-col p {
@@ -1506,7 +1367,7 @@ h1 span::after {
 }
 
 .footer-col ul li a:hover {
-  color:black;
+  color:white;
 }
 
 /* Contact Info */
